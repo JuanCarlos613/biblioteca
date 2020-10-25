@@ -1,0 +1,66 @@
+{% extends 'base.html' %}  
+{% block content %}
+{% include "navbar.html" %}
+{% load staticfiles %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">{{libro.nombre_libro}}</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'index' %}">Inicio</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="{% url 'libros' %}">Libros</a>
+      </li>
+      <li class="breadcrumb-item active">{{libro.nombre_libro}}</li>
+    </ol>
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        <!-- Blog Post -->
+        <div class="card mb-2">
+          <h1>{% block libro %} {{ object.libro }} {% endblock libro %}</h1>
+          {% if libro.imagen %} 
+            <img src="{{ libro.imagen.url }}" class="card-img-top" alt="{{libro.imagen}}">
+          {% endif %} 
+          <div class="card-body">
+            <h5>Libro: <a href="#" class="card-link">{{libro.nombre_libro}}</a></h5>
+            <h5>Autor: <a href="#" class="card-link">{{libro.autor_libro}}</a></h5>
+            <h5>Categoria: <a href="#" class="card-link">{{libro.categoria}}</a></h5>
+            <h5>Descripciòn: <a  class="card-text ">{{libro.descripcion}}</a></h5>
+            {% if libro.status == 0 %}
+                <h5>Estado: <a href="#" class="card-link">Disponible</a></h5>
+                {% else %} 
+                <h5>Estado: <a href="#" class="card-link">Ocupado</a></h5>
+            {% endif %}
+            <a href="{% url 'libros' %}" class="btn btn-primary">Regresar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+ 
+        <!-- Search Widget -->
+        <div class="card mb-4">
+          <h5 class="card-header">Buscar Libro</h5>
+          <div class="card-body">
+            
+          </div>
+        </div>
+        {% include "prestamo.html" %}
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+
+
+{% endblock content %}
+

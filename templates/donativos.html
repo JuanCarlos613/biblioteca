@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+{% block content %}
+{% include "navbar.html" %}
+<title>DONATIVOS</title>
+  <div class="container">
+    <h1 class="mt-4 mb-3">Donaciones</h1>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'index' %}">Inicio</a>
+      </li>
+      <li class="breadcrumb-item active">Donaciones</li>
+    </ol>
+
+    <div class="row">
+      <div class="col-lg-8 mb-4">
+        <h4>Envianos un mensaje si deseas donar tus libros</h4>
+        <form name="sentMessage" id="contactForm" novalidate method="POST">
+          {% csrf_token %}
+          {{form.as_p}}
+          <!-- For success/fail messages -->
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar Mensaje</button>
+        </form>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <h3>Información</h3>
+        <p>
+          San Marcos, San Marcos 
+          <br>Direccion
+          <br>
+        </p>
+        <p>
+          <p>Telefono: (502) 7760-2342</p>
+        </p>
+        <p>
+          <p>Correo: ejemplo@ejemplo.com</p>
+        </p>
+        <p>
+          <p>Horarios:</p>
+          <p>Lunes a Viernes de 8:00AM A 5:00PM</p>
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
