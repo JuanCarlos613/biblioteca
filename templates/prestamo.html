@@ -13,8 +13,8 @@
 
     <div class="row">
       <div class="col-lg-8 mb-4">
-        <h4>Si deseas un libro puedes solicitarlo</h4>
-        <h6>Llena el formulario y posteriormente se te informara para que recojas tu libro.</h6>
+        <h4>Llena el formulario para solicitar un libro</h4>
+        <a href="#">¿Como solicitar libros?</a>
         <br>
         <form name="sentMessage" id="contactForm" novalidate method="POST">
           {% csrf_token %}
@@ -22,8 +22,9 @@
          
           <!-- For success/fail messages -->
           <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar Mensaje</button>
-        </form>
+        </form> 
       </div> 
+
     </div>
   </div>
 {% endblock content %}

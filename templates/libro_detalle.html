@@ -23,10 +23,10 @@
     <div class="row">
 
       <!-- Blog Entries Column -->
-      <div class="col-md-12">
+      <div class="col-md-6">
 
         <!-- Blog Post -->
-        <div class="card mb-2">
+        <div class="card mb-6">
           <h1>{% block libro %} {{ object.libro }} {% endblock libro %}</h1>
           {% if libro.imagen %} 
             <img src="{{ libro.imagen.url }}" class="card-img-top" alt="{{libro.imagen}}">
