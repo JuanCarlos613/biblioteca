@@ -7,6 +7,6 @@ urlpatterns = [
     path('libro/', views.LibroList.as_view(), name='libros'),
     path('<slug:slug>/', views.LibroDetail.as_view(), name='detalle'),  
     path('donativo/nuevo', donativos_view, name='donar'),
-    path('reservar/reservar', prestamo_crear, name= 'crear')
+    path('libro/solicitud', prestamo_crear, name= 'crear')
 
 ]

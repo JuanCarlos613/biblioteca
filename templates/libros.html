@@ -3,7 +3,7 @@
 {% include "navbar.html" %}
 {% load staticfiles %}
 
-<title>NUESTROS LIBROS</title>
+<title>Nuestros Libros</title>
 
   <div class="container">
 
@@ -16,17 +16,6 @@
       <li class="breadcrumb-item active">Nuestros Libros</li>
     </ol>
 
-    <div class="card mb-12">
-        <h5 class="card-header">Buscar Libro</h5>
-        <div class="card-body">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Nombre del libro...">
-            <span class="input-group-append">
-              <button class="btn btn-secondary" type="button">Buscar</button>
-            </span>
-          </div>
-        </div>
-      </div>
 
     <div class="row">
         {% for libro in libro_list%} 
@@ -40,12 +29,12 @@
           {% endif %} 
           <div class="card-body">
             <h4 class="card-title">
-              <a href="{% url 'detalle' libro.slug %}">{{libro.nombre_libro}}</a>
+              <a href="{% url 'detalle' libro.slug %}"></a>
             </h4>
-            <h5>ID: <a href="#" class="card-link">{{libro.id}}</a></h5>
+            <h5>Libro: <a href="#" class="card-link">{{libro.nombre_libro}}</a></h5>
             <h5>Autor: <a href="#" class="card-link">{{libro.autor_libro}}</a></h5>
             <h5>Categoria: <a href="#" class="card-link">{{libro.categoria}}</a></h5>
-            <h5>Descripciòn: <a  class="card-text ">{{libro.descripcion}}</a></h5>
+            <h5>Descripción: <a  class="card-text ">{{libro.descripcion}}</a></h5>
             {% if libro.status == 0 %}
                 <h5>Estado: <a href="#" class="card-link">Disponible</a></h5>
                 {% else %} 

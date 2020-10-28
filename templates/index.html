@@ -2,7 +2,7 @@
 {% block content %}
 {% load staticfiles %}
 {% include "navbar.html" %}
-<title>INICIO</title>
+<title>Inicio</title>
 <header>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -11,14 +11,14 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url({% static 'img/libro2.jpg' %});">
+        <div class="carousel-item active" style="background-image: url({% static 'img/b1.png' %});">
           <div class="carousel-caption d-none d-md-block">
             <h3>Biblioteca San Marcos</h3>
             <p>Busca el libro que necesites</p>
           </div>
         </div>
         <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url({% static 'img/biblioteca.jpg' %});">
+        <div class="carousel-item" style="background-image: url({% static 'img/b6.png' %});">
           <div class="carousel-caption d-none d-md-block">
             <h3>Biblioteca San Marcos</h3>
             <p>Busca el libro que necesites</p>
@@ -50,11 +50,11 @@
     <!-- Intro Content -->
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
+        <img class="img-fluid rounded mb-4" src="{% static 'img/bibliotecasm.jpg' %}" alt="">
       </div>
       <div class="col-lg-6">
-        <h2>INFORMACION</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
+        <h2>Biblioteca San Marcos</h2>
+        <p>la biblioteca de San Marcos </p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
       </div>
@@ -62,45 +62,33 @@
     <!-- /.row -->
 
     <!-- Team Members -->
-    <h2>Nuestro equipo</h2>
+    <h2>Nuestras Instalaciones</h2>
 
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100 text-center">
-          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <img class="card-img-top" src="{% static 'img/uno.jpg' %}" alt="imagen">
           <div class="card-body">
-            <h4 class="card-title">Team Member</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <h4 class="card-title">Nuestros Libros</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#">name@example.com</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100 text-center">
-          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <img class="card-img-top" src="{% static 'img/dos.jpg' %}" alt="imagen">
           <div class="card-body">
-            <h4 class="card-title">Team Member</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <h4 class="card-title">Nuestras Instalaciones</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#">name@example.com</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100 text-center">
-          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <img class="card-img-top" src="{% static 'img/tres.jpg' %}" alt="imagen">
           <div class="card-body">
-            <h4 class="card-title">Team Member</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <h4 class="card-title">Solicita tus libros en linea</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#">name@example.com</a>
           </div>
         </div>
       </div>

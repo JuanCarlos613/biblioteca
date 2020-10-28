@@ -8,14 +8,14 @@ class DonativoForm(forms.ModelForm):
         fields = [
             'nombre', 
             'institucion', 
-            'numero_contacto', 
+            'numero_contacto',
             'email',
             'mensaje',
             ]
         labels = {
             'nombre': 'Nombre', 
             'institucion': 'Institucion', 
-            'numero_contacto': 'Telefono', 
+            'numero_contacto': 'Telefono',
             'email': 'E-mail',
             'mensaje':'Mensaje',
 
@@ -25,7 +25,7 @@ class DonativoForm(forms.ModelForm):
             'institucion': forms.TextInput(attrs={'class': 'form-control'}),
             'numero_contacto': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.TextInput(attrs={'class': 'form-control '}),
-            'mensaje': forms.TextInput(attrs={'class': 'form-control'}),
+            'mensaje': forms.Textarea(attrs={'class': 'form-control ','cols': 30, 'rows': 5}),
         }
 
 
@@ -38,18 +38,14 @@ class PrestamoForm(forms.ModelForm):
             'tipo_identificacion', 
             'no_identificacion',
             'libro',
-            'fecha_prestamo', 
-            'fecha_entrega', 
             'notas',
             ]
         labels = {
             'nombre_prestamista': 'Nombre Completo', 
-            'telefono': 'No. Telefono', 
+            'telefono': 'No. Telefono',
             'tipo_identificacion': 'Identificacion', 
             'no_identificacion': 'No Identificacion',
             'libro': 'Libro',
-            'fecha_prestamo':'Fecha Prestamo', 
-            'fecha_entrega': 'Fecha Entrega', 
             'notas': 'Comentarios',  
         }
         widgets = {
@@ -57,8 +53,6 @@ class PrestamoForm(forms.ModelForm):
             'telefono': forms.TextInput(attrs={'class': 'form-control col-md-4 '}),
             'tipo_identificacion' :forms.Select(attrs={'class': 'form-control'}),
             'no_identificacion': forms.TextInput(attrs={'class': 'form-control '}),
-            'libro':forms.Select(attrs={'class': 'form-control '}),
-            'fecha_prestamo': forms.TextInput(attrs={'class': 'form-control', 'type':'date'}),
-            'fecha_entrega': forms.TextInput(attrs={'class': 'form-control', 'type':'date'}),
+            'libro':forms.Select(attrs={'class': 'form-control'}),
             'notas': forms.Textarea(attrs={'class': 'form-control ','cols': 30, 'rows': 5}),
         }

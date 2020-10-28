@@ -30,18 +30,19 @@ class Libro(models.Model):
     categoria = models.ForeignKey(Categoria, related_name='categoria_libro', on_delete = models.CASCADE)
     slug = models.SlugField(max_length=200, unique=True)
     descripcion = models.CharField(max_length=200)
-    status = models.IntegerField(choices=STATUS, default=1)
+    status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now= True)
+    class Meta:
+      verbose_name_plural = "libros"
+
     def __str__(self):
         return '{}'.format(self.nombre_libro)
-    def get_absolute_url(self):
-        return reverse('inicio:libro', args=[self.id, self.nombre_libro])
 
 class Prestamo(models.Model):
     nombre_prestamista = models.CharField(max_length=200, blank=False) 
     telefono= models.CharField(max_length=8, blank= False)
-    tipo_identificacion = models.ForeignKey(
+    tipo_identificacion = models.ForeignKey( 
                         Identificacion, 
                         related_name='identificacion', 
                         on_delete = models.CASCADE,
@@ -50,15 +51,15 @@ class Prestamo(models.Model):
     no_identificacion = models.CharField(
                         max_length=20, 
                         blank= False
-                        )
+                        ) 
     libro = models.ForeignKey(
                         Libro, 
                         related_name='libro_prestado', 
                         on_delete = models.CASCADE,
                         blank=False
                         )
-    fecha_prestamo= models.DateTimeField(blank= True)
-    fecha_entrega= models.DateTimeField(blank = True)
+    fecha_prestamo= models.DateTimeField(blank= True, null=True)
+    fecha_entrega= models.DateTimeField(blank = True, null=True)
     notas = models.CharField(max_length=200, blank= True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now= True)

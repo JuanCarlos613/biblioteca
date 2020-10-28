@@ -907,6 +907,12 @@
 
   $.jqBootstrapValidation = function (options) {
     $(":input").not("[type=image],[type=submit]").jqBootstrapValidation.apply(this,arguments);
-  };
+  }; 
+  
+  $(document).ready(function () {
+    $('select').selectize({
+        sortField: 'text'
+    });
+});
 
 })( jQuery );

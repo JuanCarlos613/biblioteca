@@ -1,9 +1,9 @@
 {% extends 'base.html' %} 
 {% block content %}
 {% include "navbar.html" %}
-<title>SOLICITUD DE PRESTAMO</title>
+<title>Solicitud de prestamo</title>
   <div class="container">
-    <h1 class="mt-4 mb-3">Prestamo</h1>
+    <h1 class="mt-4 mb-3">Solicitud de prestamo</h1>
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
         <a href="{% url 'index' %}">Inicio</a>
@@ -13,14 +13,17 @@
 
     <div class="row">
       <div class="col-lg-8 mb-4">
-        <h4>Envianos un mensaje si deseas donar tus libros</h4>
+        <h4>Si deseas un libro puedes solicitarlo</h4>
+        <h6>Llena el formulario y posteriormente se te informara para que recojas tu libro.</h6>
+        <br>
         <form name="sentMessage" id="contactForm" novalidate method="POST">
           {% csrf_token %}
-          {{form.as_p}}
+          {{form.as_p}} 
+         
           <!-- For success/fail messages -->
           <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar Mensaje</button>
         </form>
-      </div>
+      </div> 
     </div>
   </div>
 {% endblock content %}
