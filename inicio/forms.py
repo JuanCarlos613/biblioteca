@@ -6,15 +6,15 @@ class DonativoForm(forms.ModelForm):
     class Meta:
         model = Donativo
         fields = [
-            'nombre', 
-            'institucion', 
+            'nombre',
+            'institucion',
             'numero_contacto',
             'email',
             'mensaje',
             ]
         labels = {
-            'nombre': 'Nombre', 
-            'institucion': 'Institucion', 
+            'nombre': 'Nombre',
+            'institucion': 'Institucion',
             'numero_contacto': 'Telefono',
             'email': 'E-mail',
             'mensaje':'Mensaje',
@@ -33,20 +33,20 @@ class PrestamoForm(forms.ModelForm):
     class Meta:
         model = Prestamo
         fields = [
-            'nombre_prestamista', 
-            'telefono', 
-            'tipo_identificacion', 
+            'nombre_prestamista',
+            'telefono',
+            'tipo_identificacion',
             'no_identificacion',
             'libro',
             'notas',
             ]
         labels = {
-            'nombre_prestamista': 'Nombre Completo', 
+            'nombre_prestamista': 'Nombre Completo',
             'telefono': 'No. Telefono',
-            'tipo_identificacion': 'Identificacion', 
+            'tipo_identificacion': 'Identificacion',
             'no_identificacion': 'No Identificacion',
             'libro': 'Libro',
-            'notas': 'Comentarios',  
+            'notas': 'Comentarios',
         }
         widgets = {
             'nombre_prestamista': forms.TextInput(attrs={'class': 'form-control '}),

@@ -15,7 +15,7 @@ SECRET_KEY = 'n(9c0%ti#1_)$2&mm*+b33=tyl(7($2_wu9^(-*h2=y74)=$o%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -65,17 +65,18 @@ WSGI_APPLICATION = 'bibliotecasm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+#conectamos al servicio de mysql para la base de datos
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bibliotecasm',
-        'USER': 'root',
-        'PASSWORD':'F3rkr5',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'bliotecasanmarco$smbiblioteca',
+        'USER': 'bliotecasanmarco',
+        'PASSWORD':'sanmarcos@2020',
+        'HOST': 'bliotecasanmarcosgt.mysql.pythonanywhere-services.com',
+
     }
 }
+
 
 
 # Password validation
@@ -114,10 +115,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATICFILES_DIRS = [ 
-    os.path.join(BASE_DIR,'static')
 
-]
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/bliotecasanmarcosgt/biblioteca/static'
 MEDIA_ROOT='media'
 MEDIA_URL = '/media/'
